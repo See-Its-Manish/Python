@@ -19,5 +19,11 @@ print(id(a))	# Memory Address is changed
 a+="World"		# Concatinating "World" with string a
 print(id(a))	# Memory Address have been changed
 
-
-# 
+# Formatted String or f String
+age=18
+str1=f"MANISH SHARMA IS {age} YRS OLD"
+print(str1)
+city="Rajouri Garden"
+pin=110027
+str2=f"Manish Sharma lives in {city} and Pincode is {pin}"
+print(str2)
