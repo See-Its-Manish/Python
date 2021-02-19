@@ -1,3 +1,8 @@
+'''
+***
+* *
+***
+'''
 n=int(input("Enter the Height: "))
 print("*"*n)
 for i in range(2,n):
