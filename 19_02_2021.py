@@ -7,6 +7,7 @@ print(tup)
 
 """
 # Tuples are immutable
+# immutability means we can not change / append /  update a tuple once initialised
 tup[0]  = 12 # It will give an error
 
 """
@@ -65,18 +66,18 @@ t=func()
 print(type(t))	# type will be tuple
 """
 There is general notion in programming that whenever a function is returning
-something. We can't edit or change that value directly. You should make a custom copy of that
+something. We can't edit or change that value directly. You should make a custom copy of that and
 make changes to it. Tuples have significance when you need such data structure.
 """
-toChange = list(func())	# This will new copy of tuple returned by the function
-toChange[0] = 100
+toChange = list(func())	# This will make new copy of tuple returned by the function into  a list
+toChange[0] = 100 		# Now we can edit our copy 
 print(toChange)
 
 """
 How to insert an element at specified position in a list
 """
 # insert(postion, value) ----> syntax of insert()
-l.insert(0 , "First")
+l.insert(0 , "First")		# Remember you can insert any kind of data into a list
 l.insert(5, "Second")
 
 
@@ -87,13 +88,14 @@ l.insert(5, "Second")
 ****************** Dictionary in Python (dict) **************************
 """
 """
-Dictionary stores <key, value> pair in the form of list.
-constraint: key is immutable but value can be anything.
-Dictionary doesn't store values sequentially instead it stores in randomely
+Dictionary stores <key, value> pair in the form of array of Linked List.
+constraint: key is immutable but value are mutable.
 Dictionary stores value in the array of Linked List (Using Hashing)
 Just like unordered map in C++ or HashMap in Java
-If you don't know about hashing then just assume that dictionary stores element in random order 
+If you don't know about hashing then just assume that dictionary stores element in random order
+and you can't access dict elements with indexing that we used in list
 """
+# Dict values are uniquely identified by their keys
 
 d={"Name":"Manish", "Age":18, "College":"NIET"}
 print(d)
@@ -102,32 +104,32 @@ print order may not be the same each time as that of storage time
 """
 print(type(d))
 """
-We can't make keys an mutable value
+We can't make keys a mutable value
 It will always take a immutable value
 """
-# d1 = {[1,2,3]:"Value"} # This will give error <key,value> [1,2,3] -> list
+# d1 = {[1,2,3]:"Value"} # This will give error cause in this pair of <key,value> our key [1,2,3] -> list
 # List is mutable and and key will always take immutable value and not mutable
 
 d2 = {(1,2,3): "Value"}
 #This Will work cause here key->(1,2,3) is a tuple(which is immutable)
 
 """
-A dictioanry always have unique keys
+A dictionary always have unique keys
 A dictionary can't have two or more same key. Each key uniquely identifies its value
 If you try to give same key more than once it will not add another <key, value> pair 
 but update the value of existing key
 Example:-
 """
 d3= {"Name": "Manish" ,"Name": "Abhishek"}
-print(d3)  # It will print "Name":"Abhishek" (Overriden the exitsing <"Name:Manish">)
+print(d3)  # It will print "Name":"Abhishek" (Overriden the exitsing <"Name" : " Manish">)
 
 """
 We can only Access Elements in dict using keys
 """
-print(d["Name"], d["Age"]) # It will print Value at keys->(Name) & (Age) in d
+print(d["Name"], d["Age"]) # It will print Value at key->(Name) & key->(Age) in d
 
 # How to add <key,Value> pair in dict
-d["State"] = "New Delhi" # Added <"State" : "New Delhi">
+d["State"] = "New Delhi" # Added <"State" : "New Delhi">	key -> "State" , Value  -> "New Delhi"
 print(d)
 
 
@@ -141,12 +143,12 @@ If we use get() function to access values in dict
 than it can handle above cases by giving None if a key doesn't 
 exist in our dictionary
 """
-print(d.get("Education")) # get returns None cause there is no such key 'Education' in our dict
+print(d.get("Education")) # get() returns None cause there is no such key 'Education' in our dict
 
 '''
 To delete a <key,value> pair
 '''
-del[d["State"]]	# Will delete <"State" : "New Delhi"> from our in dict
+del[d["State"]]	# Will delete <"State" : "New Delhi"> from dict d
 print(d) 
 
 '''
@@ -172,5 +174,3 @@ for key in d.keys():	# key--->variable not a keyword
 
 # We have formed a list of keys in our dictinary
 print(listOfKeys)
-
-
