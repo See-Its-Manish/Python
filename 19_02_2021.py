@@ -1,5 +1,5 @@
 """
-*********************Tuples in Python*********************
+********************* Tuples in Python *********************
 """
 tup= (1,2,3,4)
 
@@ -19,7 +19,7 @@ print(tup[0] , tup[1])
 
 
 """
-*********************Lists in Python*************************
+********************* Lists in Python *************************
 """
 
 # What is the Difference between tuple and list
@@ -37,7 +37,7 @@ print(l)
 
 
 """
-*********Slicing in List & Tuple***********
+********* Slicing in List & Tuple ***********
 """
 
 """
@@ -84,7 +84,7 @@ l.insert(5, "Second")
 
 
 """
-******************Dictionary in Python (dict)**************************
+****************** Dictionary in Python (dict) **************************
 """
 """
 Dictionary stores <key, value> pair in the form of list.
