@@ -88,7 +88,7 @@ l.insert(5, "Second")
 ****************** Dictionary in Python (dict) **************************
 """
 """
-Dictionary stores <key, value> pair in the form of array of Linked List.
+Dictionary stores <key, value> pair in the form of array of Linked List (HashTables).
 constraint: key is immutable but value are mutable.
 Dictionary stores value in the array of Linked List (Using Hashing)
 Just like unordered map in C++ or HashMap in Java
