@@ -65,8 +65,8 @@ def func():
 t=func()
 print(type(t))	# type will be tuple
 """
-There is general notion in programming that whenever a function is returning
-something. We can't edit or change that value directly. You should make a custom copy of that and
+There is general notion in programming that whenever a function is returning multiple items, 
+We can't edit or change that value directly. You should make a custom copy of that and
 make changes to it. Tuples have significance when you need such data structure.
 """
 toChange = list(func())	# This will make new copy of tuple returned by the function into  a list

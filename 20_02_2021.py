@@ -2,10 +2,11 @@
 ***********How to iterate over list**************
 """
 # List 
-l=[1,2,3,4,5]
-
+l=[1,2,3,4]
+myList=[1,23]
+print(myList)
 # Method 1
-for i in l:
+for i in l:		# for every i in l   i--> elements in l
 	print(i, end = " ")
 print()		# For a new Line
 
@@ -27,13 +28,16 @@ print()
 
 
 # Method 4
-# Using List Comprehension
+# Ughon
 x = [print(i) for i in l]
 
 
 # Method 5
 for i, val in enumerate(l):
 	print(i,"->",val)
+
+for i,val in enumerate(l):
+	print(i,val)
 
 
 
@@ -108,10 +112,13 @@ print(type(tup3) ,tup3)
 
 
 
+myList = [1,2,3,4,5]
 
-
-
-
+sum = 0
+for i in myList:
+	sum = sum + i
+mean = sum/len(myList)
+print(mean)
 
 
 
