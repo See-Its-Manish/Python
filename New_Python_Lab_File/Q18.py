@@ -1,0 +1,11 @@
+import datetime as dt
+print("Enter the First Date: ")
+d1 = int(input("Enter day: "))
+m1 = int(input("Enter month: "))
+y1 = int(input("Enter Year: "))
+print("Enter the Second Date: ")
+d2 = int(input("Enter day: "))
+m2 = int(input("Enter month: "))
+y2 = int(input("Enter Year: "))
+d= dt.date(y2,m2,d2)-dt.date(y1,m1,d1)
+print("No of days", d)

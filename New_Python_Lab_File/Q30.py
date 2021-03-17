@@ -7,11 +7,8 @@ def isPrime(n):
 	return True
 
 
-print("Enter the range[s,e]: ")
-s=int(input())
-e=int(input())
-
-for i in range(s,e+1):
-	if(isPrime(i)):
-		print(i,end=" ")
-
+n = int(input("Enter a number: "))
+if isPrime(n):
+	print("Prime")
+else:
+	print("Not Prime")
