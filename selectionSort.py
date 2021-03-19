@@ -1,19 +1,13 @@
-def Sort(l):
+def sort(l):
 	for i in range(len(l)):
-
+		small = l[i]
+		index = i
 		for j in range(i+1,len(l)):
+			if(small>l[j]):
+				small = l[j]
+				index = j
+		l[i], l[index] = l[index], l[i]
 
-			if(l[i]>l[j]):
-				temp = l[i]
-				l[i] = l[j]
-				l[j] = temp
-
-	# return l
-
-
-myList = [41,34, 45,43,2,1,1]
-
-Sort(myList)
-
-print(myList)
-
+l = [12,112,4,2,2,4421,12]
+sort(l)
+print(l)
